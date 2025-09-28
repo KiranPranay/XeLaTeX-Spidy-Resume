@@ -46,17 +46,19 @@ def experience_block(exps):
     return "\n\n".join(out)
 
 def projects_block(prjs):
-    out=[]
+    out = []
     for p in (prjs or []):
-        head = f"\\textbf{{{esc_text(p.get('title',''))}}}"
-        desc = esc_text(p.get("description",""))
-        tech = join_list_esc(p.get("technologies", []))
-        imp  = bulletize(p.get("impact", []))
-        section = head + (f" \\\\ {desc}" if desc else "")
-        if tech: section += f" \\\\ \\textcolor{{muted}}{{{tech}}}"
-        if imp:  section += f"\n\\begin{{itemize}}\n{imp}\n\\end{{itemize}}"
-        out.append(section)
+        title = esc_text(p.get("title",""))
+        desc  = esc_text(p.get("description",""))
+        tech  = join_list_esc(p.get("technologies", []))
+        imp   = bulletize(p.get("impact", []))
+
+        block = f"\\ProjectEntry{{{title}}}{{{desc}}}{{{tech}}}"
+        if imp:
+            block += f"\n\\begin{{itemize}}\n{imp}\n\\end{{itemize}}"
+        out.append(block)
     return "\n\n".join(out)
+
 
 def build_contact_block(pd: dict) -> str:
     parts = []

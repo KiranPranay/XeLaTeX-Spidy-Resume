@@ -131,6 +131,13 @@
     \textit{#2} & \\
   \end{tabular*}\par
 }
+% Flush-left project block with optional tech line
+\newcommand{\ProjectEntry}[3]{%
+  \par\noindent\textbf{#1}\\
+  #2%
+  \if\relax\detokenize{#3}\relax\else\\\textcolor{muted}{#3}\fi
+  \par\vspace{2pt}
+}
 \newcommand{\EducationEntry}[3]{%
   \noindent\textbf{#1} --- #2%
   \if\relax\detokenize{#3}\relax\else\\\textcolor{muted}{#3}\fi
