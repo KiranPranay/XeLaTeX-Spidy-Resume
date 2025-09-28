@@ -1,0 +1,25 @@
+# Build outputs
+/outputs/
+/*.pdf
+
+# LaTeX intermediates
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.xdv
+*.toc
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
