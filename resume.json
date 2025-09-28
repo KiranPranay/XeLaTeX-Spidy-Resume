@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "generated_on": "2025-09-28",
+    "source": "Interview with Pranay Kiran",
+    "version": "1.1"
+  },
+  "personal_details": {
+    "name": "Pranay Kiran",
+    "age": 24,
+    "mobile": "9676504552",
+    "email": "pranay@weberq.in"
+  },
+  "professional_summary": "Multidisciplinary engineer with 5+ years of professional experience in aerospace, robotics, automation, and full-stack development. Proven expertise in establishing lithium battery production lines, automating manufacturing processes, and delivering product solutions from design to deployment.",
+  "education": [
+    { "degree": "Matriculation", "institution": "Genius High School", "score": "9.3 / 10", "type": "GPA" },
+    { "degree": "Intermediate", "institution": "Sri Chaitanya Junior College", "score": "73%", "type": "Percentage" },
+    { "degree": "B.Tech Mechanical Engineering", "institution": "MLR Institute of Technology", "score": "7.8", "type": "GPA" },
+    { "degree": "M.Tech Aerospace Engineering (in-progress)", "institution": "MLR Institute of Technology", "status": "1 year completed" }
+  ],
+  "skills": {
+    "engineering": ["Mechanical Design", "Aerospace Analysis", "Robotics & Automation", "Thermal Battery Design", "Manufacturing Setup"],
+    "software": ["Python", "Perl", "PHP", "Go", "SQL/MySQL", "Django", "Flask", "DevOps/Server Automation"],
+    "electronics_iot": ["ESP32", "Arduino", "PCB Design", "IoT Firmware & Systems"],
+    "cad": ["NX", "SolidWorks", "Fusion 360", "FreeCAD"],
+    "analysis": ["Structural (FEA)", "Fluid/Aero (CFD)"],
+    "soft_skills": ["Project Management", "Cross-disciplinary Leadership", "Quick Learner", "Mentoring"]
+  },
+  "experience": [
+    {
+      "position": "Design Manager (Mechanical Design)",
+      "organization": "RES Limited",
+      "duration": "2023 – Present",
+      "responsibilities": [
+        "Led design of thermal batteries, jigs, and glovebox systems",
+        "Established lithium battery production line (civil, automation, gloveboxes)",
+        "Introduced IoT & robotics for automated assembly"
+      ],
+      "impact": [
+        "Delivered full-scale lithium production capability",
+        "Increased throughput with IoT-guided automation",
+        "Improved reliability via glovebox and argon dryer designs"
+      ]
+    },
+    {
+      "position": "Technical Chairperson",
+      "organization": "MLR CIE Incubation Center",
+      "duration": "2022 – 2023",
+      "impact": [
+        "Mentored student startups and prototypes",
+        "Organized workshops and demos, improving innovation culture"
+      ]
+    },
+    {
+      "position": "Secretary",
+      "organization": "Service to Mankind (NGO)",
+      "duration": "2018 – 2021",
+      "impact": [
+        "Improved administration and event execution",
+        "Strengthened record management and stakeholder coordination"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Assembly Guidance System & Robotic Arm Automation",
+      "description": "IoT guidance LEDs for operators, scaled to a robotic arm with AI-assisted sequencing.",
+      "technologies": ["ESP32", "Custom PCB", "Firmware", "Robotics"],
+      "impact": ["Reduced training needs", "Eliminated errors", "Boosted throughput"]
+    },
+    {
+      "title": "Lithium Plant Establishment",
+      "description": "End-to-end lithium line setup: gloveboxes, argon dryer towers, process automation.",
+      "impact": ["Built in-house lithium capability", "Improved safety and reliability"]
+    },
+    {
+      "title": "Full-Stack Banking Application",
+      "description": "Startup project: built and maintained full banking platform with DevOps automation.",
+      "impact": ["Production-ready system", "Automated deployment", "Secure user flows"]
+    },
+    {
+      "title": "Hydrogen Fuel Cell Prototype",
+      "description": "Academic project on automotive fuel cell stack design and integration."
+    }
+  ],
+  "languages": {
+    "spoken": ["Telugu", "Hindi", "English", "French (basic)"],
+    "programming": ["Python", "Perl", "PHP", "Go", "SQL/MySQL", "Java (basic)", "JavaScript (basic)", "C/C++ (basic)"]
+  },
+  "achievements": [
+    "Established lithium battery production line from scratch",
+    "Automated assembly with IoT & robotics",
+    "Delivered production-ready banking application",
+    "Contributed to Android ROMs & NGO systems"
+  ],
+  "preferred_roles": [
+    "Mechanical Design Lead",
+    "Robotics & Automation Engineer",
+    "Aerospace Structures Engineer"
+  ]
+}

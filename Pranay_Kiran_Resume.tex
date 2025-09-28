@@ -1,0 +1,245 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------- Engine-safe font setup ----------
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{tgheros}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \IfFontExistsTF{Inter}{\setmainfont{Inter}}{\setmainfont{TeX Gyre Heros}}
+\fi
+
+% ---------- Layout & micro-typography ----------
+\usepackage[margin=1.6cm]{geometry}
+\usepackage{microtype}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\setlist[itemize]{nosep,left=1.4em,topsep=2pt}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\linespread{1.06}
+
+% ---------- Colors ----------
+\usepackage{xcolor}
+\definecolor{brand}{HTML}{0E7AFE}
+\definecolor{spider}{HTML}{E11D2E}
+\definecolor{text}{HTML}{111827}
+\definecolor{muted}{HTML}{6B7280}
+\definecolor{rule}{HTML}{CBD5E1}
+
+% ---------- Hyperref & PDF metadata ----------
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=brand,
+  linkcolor=brand,
+  pdfauthor={Pranay Kiran},
+  pdftitle={Pranay Kiran — Resume},
+  pdfsubject={Professional Resume},
+  pdfkeywords={Resume, Engineering, Robotics, Automation, Mechanical, IoT},
+  pdfcreator={JSON->LaTeX Resume Pipeline},
+  pdfproducer={latexmk/xelatex}
+}
+\urlstyle{same}
+
+% ---------- Headings ----------
+\usepackage{titlesec}
+\titleformat{\section}
+  {\large\bfseries\color{brand}}{}{0pt}{\vspace{2pt}}
+  [\vspace{-6pt}\color{rule}\titlerule]
+
+% ---------- Visual helpers ----------
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+% FontAwesome5 optional; define no-op if missing
+\makeatletter
+\IfFileExists{fontawesome5.sty}{%
+  \RequirePackage{fontawesome5}%
+}{%
+  \newcommand{\faIcon}[1]{}%
+}
+\makeatother
+
+\newcommand{\tagchip}[1]{%
+  \tikz[baseline] \node[
+    fill=brand!10,
+    text=brand,
+    rounded corners=2pt,
+    inner xsep=4pt,
+    inner ysep=1.6pt,
+    anchor=base
+  ]{\footnotesize #1};}
+
+% ---------- Background (keep opacities; lighten colors) ----------
+\usepackage{eso-pic}
+\newcommand{\webOpacity}{0.12}    % keep
+\newcommand{\iconsOpacity}{0.05}  % keep
+
+\newcommand{\BackgroundIcons}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    % Use text opacity (best for glyphs) + light color
+    \node[text opacity=\iconsOpacity,anchor=center,text=brand!25!white] at ($(current page.center)+(0,4.2)$)   {\scalebox{7}{\faIcon{cogs}}};
+    \node[text opacity=\iconsOpacity,anchor=center,text=brand!25!white] at ($(current page.center)+(-6.0,0.6)$) {\scalebox{6.5}{\faIcon{calculator}}};
+    \node[text opacity=\iconsOpacity,anchor=center,text=brand!25!white] at ($(current page.center)+(6.0,0.2)$)  {\scalebox{6.5}{\faIcon{code}}};
+    \node[text opacity=\iconsOpacity,anchor=center,text=brand!25!white] at ($(current page.center)+(0,-6.0)$)   {\scalebox{7}{\faIcon{wrench}}};
+  \end{tikzpicture}%
+}
+
+\newcommand{\webSize}{9.5cm}
+\newcommand{\SpiderWebTR}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \begin{scope}
+      \clip (current page.north west) rectangle (current page.south east);
+      \begin{scope}[shift={($(current page.north east)+(-0.95cm,-0.95cm)$)}]
+        % Apply opacity in styles (more robust across viewers)
+        \tikzset{webstrand/.style={spider!20!white, line width=0.12pt, line cap=round, opacity=\webOpacity}}
+        \tikzset{webring/.style={spider!15!white, line width=0.16pt, line cap=round, opacity=\webOpacity}}
+        \tikzset{webrim/.style={spider!10!white, line width=0.18pt, line cap=round, opacity=\webOpacity}}
+        \foreach \theta in {180,186,...,270}{
+          \draw[webstrand] (0,0) -- (\theta:\webSize+0.15cm);
+        }
+        \foreach \r in {0.70,1.15,1.60,2.05,2.50,2.95,3.40,3.90,4.40,4.95,5.55,6.20,6.90,7.60,8.35,9.15}{
+          \draw[webring] (178.4:\r cm) arc[start angle=178.4, end angle=271.6, radius=\r cm];
+        }
+        \foreach \r in {1.4,3.1,5.1,7.3,9.0}{
+          \draw[webrim] (180.8:\r cm) arc[start angle=180.8, end angle=269.2, radius=\r cm];
+        }
+      \end{scope}
+    \end{scope}
+  \end{tikzpicture}%
+}
+
+\AddToShipoutPictureBG*{%
+  \BackgroundIcons
+  \SpiderWebTR
+}
+
+% ---------- Footer with build stamp ----------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{\footnotesize\textit{\color{muted}Build: 2025-09-28 19:21 IST \,\,|\,\, hash: 08d99b7437}}
+\setlength{\footskip}{18pt}
+
+% ---------- Split underline ----------
+\newcommand{\SplitUnderline}[2]{%
+  \begin{tikzpicture}[baseline, x=\linewidth, y=1pt]
+    \draw[line width=#2, color=brand, line cap=round] (0,0) -- (#1,0);
+    \draw[line width=#2, color=spider, line cap=round] (#1,0) -- (1,0);
+  \end{tikzpicture}%
+}
+
+\begin{document}
+\color{text}
+\justifying
+
+% ---------- Header ----------
+\noindent
+\begin{minipage}{0.62\linewidth}
+  {\LARGE\bfseries Pranay Kiran}\\[-1pt]
+  \small\textcolor{muted}{\textbf{Code + Mechanical = My Engineering Advantage}}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.36\linewidth}\raggedleft
+  \href{mailto:pranay@weberq.in}{pranay@weberq.in} \textcolor{muted}{\textbar} +91-9676504552 \textcolor{muted}{\textbar} \href{https://weberq.in}{weberq.in}
+\end{minipage}
+
+\vspace{6pt}
+\SplitUnderline{0.82}{1.2pt}
+
+% ===================== Body (single column) =====================
+\section*{Summary}
+\small Multidisciplinary engineer with 5+ years of professional experience in aerospace, robotics, automation, and full-stack development. Proven expertise in establishing lithium battery production lines, automating manufacturing processes, and delivering product solutions from design to deployment.
+
+\section*{Skills}
+\textbf{Engineering:} Mechanical Design, Aerospace Analysis, Robotics \& Automation, Thermal Battery Design, Manufacturing Setup \\
+\textbf{Software:} Python, Perl, PHP, Go, SQL/MySQL, Django, Flask, DevOps/Server Automation \\
+\textbf{Electronics/IoT:} ESP32, Arduino, PCB Design, IoT Firmware \& Systems \\
+\textbf{CAD:} NX, SolidWorks, Fusion 360, FreeCAD \\
+\textbf{Analysis:} Structural (FEA), Fluid/Aero (CFD) \\
+\textbf{Soft Skills:} Project Management, Cross-disciplinary Leadership, Quick Learner, Mentoring
+
+\vspace{2pt}
+\small \textcolor{muted}{\tagchip{Robotics}\ \tagchip{Thermal Batteries}\ \tagchip{Automation}\ \tagchip{IoT}\ \tagchip{DevOps}}
+
+\section*{Experience}
+\textbf{Design Manager (Mechanical Design)} \hfill 2023 – Present \\ \textit{RES Limited}
+\begin{itemize}
+\item Delivered full-scale lithium production capability
+\item Increased throughput with IoT-guided automation
+\item Improved reliability via glovebox and argon dryer designs
+\item Led design of thermal batteries, jigs, and glovebox systems
+\item Established lithium battery production line (civil, automation, gloveboxes)
+\item Introduced IoT \& robotics for automated assembly
+\end{itemize}
+
+
+\textbf{Technical Chairperson} \hfill 2022 – 2023 \\ \textit{MLR CIE Incubation Center}
+\begin{itemize}
+\item Mentored student startups and prototypes
+\item Organized workshops and demos, improving innovation culture
+\end{itemize}
+
+
+\textbf{Secretary} \hfill 2018 – 2021 \\ \textit{Service to Mankind (NGO)}
+\begin{itemize}
+\item Improved administration and event execution
+\item Strengthened record management and stakeholder coordination
+\end{itemize}
+
+
+\section*{Projects}
+\textbf{Assembly Guidance System \& Robotic Arm Automation} \\ IoT guidance LEDs for operators, scaled to a robotic arm with AI-assisted sequencing. \\ \textcolor{muted}{ESP32, Custom PCB, Firmware, Robotics}
+\begin{itemize}
+  \item Reduced training needs
+  \item Eliminated errors
+  \item Boosted throughput
+\end{itemize}
+
+\textbf{Lithium Plant Establishment} \\ End-to-end lithium line setup: gloveboxes, argon dryer towers, process automation.
+\begin{itemize}
+  \item Built in-house lithium capability
+  \item Improved safety and reliability
+\end{itemize}
+
+\textbf{Full-Stack Banking Application} \\ Startup project: built and maintained full banking platform with DevOps automation.
+\begin{itemize}
+  \item Production-ready system
+  \item Automated deployment
+  \item Secure user flows
+\end{itemize}
+
+\textbf{Hydrogen Fuel Cell Prototype} \\ Academic project on automotive fuel cell stack design and integration.
+
+\section*{Achievements}
+\begin{itemize}
+  \item Established lithium battery production line from scratch
+  \item Automated assembly with IoT \& robotics
+  \item Delivered production-ready banking application
+  \item Contributed to Android ROMs \& NGO systems
+\end{itemize}
+
+\section*{Education}
+Matriculation \textemdash\ Genius High School \\ \textcolor{muted}{9.3 / 10 (GPA)}
+
+Intermediate \textemdash\ Sri Chaitanya Junior College \\ \textcolor{muted}{73\% (Percentage)}
+
+B.Tech Mechanical Engineering \textemdash\ MLR Institute of Technology \\ \textcolor{muted}{7.8 (GPA)}
+
+M.Tech Aerospace Engineering (in-progress) \textemdash\ MLR Institute of Technology \\ \textcolor{muted}{1 year completed}
+
+\section*{Languages}
+\textbf{Spoken:} Telugu, Hindi, English, French (basic) \\
+\textbf{Programming:} Python, Perl, PHP, Go, SQL/MySQL, Java (basic), JavaScript (basic), C/C++ (basic)
+
+\section*{Roles of Interest}
+Mechanical Design Lead, Robotics \& Automation Engineer, Aerospace Structures Engineer
+
+\end{document}
