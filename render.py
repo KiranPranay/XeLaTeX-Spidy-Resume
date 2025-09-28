@@ -1,17 +1,16 @@
-import json, hashlib, re
+import json, hashlib, re, argparse, sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 def esc_text(s: str) -> str:
     if s is None: return ""
-    return (str(s)
-            .replace('\\', r'\\').replace('&', r'\&').replace('%', r'\%')
-            .replace('#', r'\#').replace('_', r'\_')
-            .replace('{', r'\{').replace('}', r'\}'))
+    return (str(s).replace('\\', r'\\').replace('&', r'\&').replace('%', r'\%')
+                 .replace('#', r'\#').replace('_', r'\_')
+                 .replace('{', r'\{').replace('}', r'\}'))
 
 def esc_url(u: str) -> str:
     if not u: return ""
-    return u.strip().replace(" ", "%20")  # keep URL chars intact
+    return u.strip().replace(" ", "%20")
 
 def join_list_esc(items): return ", ".join(esc_text(x) for x in (items or []))
 def bulletize(items, prefix="  \\item "): return "\n".join(f"{prefix}{esc_text(x)}" for x in (items or []))
@@ -19,8 +18,7 @@ def bulletize(items, prefix="  \\item "): return "\n".join(f"{prefix}{esc_text(x
 def nice_label(url: str) -> str:
     if not url: return ""
     label = re.sub(r'^https?://', '', url.strip(), flags=re.I)
-    label = re.sub(r'/$', '', label)
-    return esc_text(label)
+    return esc_text(label.rstrip('/'))
 
 def education_block(edu):
     rows=[]
@@ -64,10 +62,8 @@ def build_contact_block(pd: dict) -> str:
     parts = []
     email = pd.get("email")
     mobile = pd.get("mobile")
-    # Accept several keys for portfolio
     portfolio = pd.get("portfolio") or pd.get("website") or pd.get("url")
 
-    # If portfolio missing, try derive from email domain (ignore common providers)
     if not portfolio and isinstance(email, str) and "@" in email:
         domain = email.split("@",1)[1].lower()
         if domain not in {"gmail.com","outlook.com","yahoo.com","hotmail.com","proton.me","icloud.com"}:
@@ -84,9 +80,21 @@ def build_contact_block(pd: dict) -> str:
     return sep.join(parts)
 
 def main():
-    base = Path(".")
-    data = json.loads((base/"resume.json").read_text(encoding="utf-8"))
-    tpl  = (base/"template.tex").read_text(encoding="utf-8")
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--config", default="config/pranay.json")
+    args = ap.parse_args()
+
+    cfg_path = Path(args.config)
+    cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
+
+    template_path = Path(cfg["template"])
+    input_json    = Path(cfg["input_json"])
+    outdir        = Path(cfg.get("outdir","outputs"))
+    outbasename   = cfg.get("output_basename","resume")
+    outdir.mkdir(parents=True, exist_ok=True)
+
+    data = json.loads(input_json.read_text(encoding="utf-8"))
+    tpl  = template_path.read_text(encoding="utf-8")
 
     ist = timezone(timedelta(hours=5, minutes=30))
     build_time_ist = datetime.now(ist).strftime("%Y-%m-%d %H:%M")
@@ -97,10 +105,8 @@ def main():
     tpl = tpl.replace("<<PDF_TITLE>>",  esc_text(f"{pd.get('name','')} — Resume"))
     tpl = tpl.replace("<<PDF_SUBJECT>>","Professional Resume")
     tpl = tpl.replace("<<PDF_KEYWORDS>>","Resume, Engineering, Robotics, Automation, Mechanical, IoT")
-
     tpl = tpl.replace("<<BUILD_TIME>>", build_time_ist)
     tpl = tpl.replace("<<BUILD_HASH>>", build_hash)
-
     tpl = tpl.replace("<<NAME>>", esc_text(pd.get("name","")))
     tpl = tpl.replace("<<CONTACT_BLOCK>>", build_contact_block(pd))
     tpl = tpl.replace("<<SUMMARY>>", esc_text(data.get("professional_summary","")))
@@ -123,8 +129,18 @@ def main():
     tpl = tpl.replace("<<LANG_PROG>>",   join_list_esc(lang.get("programming", [])))
     tpl = tpl.replace("<<ROLES_BLOCK>>", join_list_esc(data.get("preferred_roles", [])))
 
-    (base/"Pranay_Kiran_Resume.tex").write_text(tpl, encoding="utf-8")
-    print("Generated: Pranay_Kiran_Resume.tex")
+    tex_out = outdir / f"{outbasename}.tex"
+    tex_out.write_text(tpl, encoding="utf-8")
+
+    # Emit a small JSON for build.ps1 to read
+    meta = {
+        "engine": cfg.get("engine","xelatex"),
+        "outdir": str(outdir),
+        "tex_path": str(tex_out),
+        "output_basename": outbasename
+    }
+    print(json.dumps(meta))
+    return 0
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

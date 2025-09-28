@@ -1,13 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1759071562.53635 "Pranay_Kiran_Resume.xdv" "Pranay_Kiran_Resume.pdf" "Pranay_Kiran_Resume" 1759071563.71617 0
-  "Pranay_Kiran_Resume.xdv" 1759071562 67752 eec74ff779fe77a93c6565c541ff1542 "xelatex"
+["xdvipdfmx"] 1759072518.42761 "outputs/Pranay_Kiran_Resume.xdv" "outputs/Pranay_Kiran_Resume.pdf" "outputs/Pranay_Kiran_Resume" 1759072519.44294 0
+  "outputs/Pranay_Kiran_Resume.xdv" 1759072518 67752 28e42e88b4832ba7f17382fb9f296a0f "xelatex"
   (generated)
-  "Pranay_Kiran_Resume.pdf"
+  "outputs/Pranay_Kiran_Resume.pdf"
   (rewritten before read)
-["xelatex"] 1759071559.79417 "Pranay_Kiran_Resume.tex" "Pranay_Kiran_Resume.xdv" "Pranay_Kiran_Resume" 1759071563.70517 0
-  "Pranay_Kiran_Resume.aux" 1759071562 190 5328844a0e8c942d5778b9583f971e27 "xelatex"
-  "Pranay_Kiran_Resume.out" 1759071562 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "Pranay_Kiran_Resume.tex" 1759071558 10269 b54a517208579a5de6818a9b3812e736 ""
+["xelatex"] 1759072515.68644 "outputs/Pranay_Kiran_Resume.tex" "outputs/Pranay_Kiran_Resume.xdv" "Pranay_Kiran_Resume" 1759072519.43273 0
   "d:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1759048098 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/texlive/2025/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1759052416 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "d:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1759047047 1528 abec98dbc43e172678c11b3b9031252a ""
@@ -148,9 +145,12 @@
   "d:/texlive/2025/texmf-dist/web2c/texmf.cnf" 1759046144 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "d:/texlive/2025/texmf-var/web2c/xetex/xelatex.fmt" 1759052857 5936986 a704dc2d10d8773746c1671b7b5bc219 ""
   "d:/texlive/2025/texmf.cnf" 1759052450 713 e69b156964470283e0530f5060668171 ""
+  "outputs/Pranay_Kiran_Resume.aux" 1759072518 190 5328844a0e8c942d5778b9583f971e27 "xelatex"
+  "outputs/Pranay_Kiran_Resume.out" 1759072517 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "outputs/Pranay_Kiran_Resume.tex" 1759072511 10269 de79b06e47f4020e1c0c281044e86764 ""
   (generated)
-  "Pranay_Kiran_Resume.aux"
-  "Pranay_Kiran_Resume.log"
-  "Pranay_Kiran_Resume.out"
-  "Pranay_Kiran_Resume.xdv"
+  "outputs/Pranay_Kiran_Resume.aux"
+  "outputs/Pranay_Kiran_Resume.log"
+  "outputs/Pranay_Kiran_Resume.out"
+  "outputs/Pranay_Kiran_Resume.xdv"
   (rewritten before read)
