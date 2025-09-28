@@ -1,14 +1,14 @@
 {
   "meta": {
     "generated_on": "2025-09-28",
-    "source": "Interview with Pranay Kiran",
     "version": "1.1"
   },
   "personal_details": {
     "name": "Pranay Kiran",
     "age": 24,
-    "mobile": "9676504552",
-    "email": "pranay@weberq.in"
+    "mobile": "1234567890",
+    "email": "pranay@weberq.in",
+    "portfolio": "https://weberq.in"
   },
   "professional_summary": "Multidisciplinary engineer with 5+ years of professional experience in aerospace, robotics, automation, and full-stack development. Proven expertise in establishing lithium battery production lines, automating manufacturing processes, and delivering product solutions from design to deployment.",
   "education": [
@@ -28,7 +28,7 @@
   "experience": [
     {
       "position": "Design Manager (Mechanical Design)",
-      "organization": "RES Limited",
+      "organization": "Renewable Energy Systems Limited",
       "duration": "2023 – Present",
       "responsibilities": [
         "Led design of thermal batteries, jigs, and glovebox systems",

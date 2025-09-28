@@ -1,19 +1,21 @@
 # Fdb version 4
-["xdvipdfmx"] 1759067469.55396 "Pranay_Kiran_Resume.xdv" "Pranay_Kiran_Resume.pdf" "Pranay_Kiran_Resume" 1759067470.63228 0
-  "Pranay_Kiran_Resume.xdv" 1759067469 59988 f817608fadd19d9e5013a15b74c20c01 "xelatex"
+["xdvipdfmx"] 1759071562.53635 "Pranay_Kiran_Resume.xdv" "Pranay_Kiran_Resume.pdf" "Pranay_Kiran_Resume" 1759071563.71617 0
+  "Pranay_Kiran_Resume.xdv" 1759071562 67752 eec74ff779fe77a93c6565c541ff1542 "xelatex"
   (generated)
   "Pranay_Kiran_Resume.pdf"
   (rewritten before read)
-["xelatex"] 1759067466.77651 "Pranay_Kiran_Resume.tex" "Pranay_Kiran_Resume.xdv" "Pranay_Kiran_Resume" 1759067470.62351 0
-  "Pranay_Kiran_Resume.aux" 1759067469 188 52729403027695cc48d64a689453e758 "xelatex"
-  "Pranay_Kiran_Resume.out" 1759067469 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "Pranay_Kiran_Resume.tex" 1759067465 9490 699a69899ce20678f53c5d3968b4d96a ""
+["xelatex"] 1759071559.79417 "Pranay_Kiran_Resume.tex" "Pranay_Kiran_Resume.xdv" "Pranay_Kiran_Resume" 1759071563.70517 0
+  "Pranay_Kiran_Resume.aux" 1759071562 190 5328844a0e8c942d5778b9583f971e27 "xelatex"
+  "Pranay_Kiran_Resume.out" 1759071562 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "Pranay_Kiran_Resume.tex" 1759071558 10269 b54a517208579a5de6818a9b3812e736 ""
   "d:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1759048098 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/texlive/2025/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1759052416 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "d:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1759047047 1528 abec98dbc43e172678c11b3b9031252a ""
+  "d:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1759047047 1524 4414a8315f39513458b80dfc63bff03a ""
   "d:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1759047047 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "d:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1759047047 1520 eccf95517727cb11801f4f1aee3a21b4 ""
   "d:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1759047047 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
+  "d:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1759047047 1288 655e228510b4c2a1abe905c368440826 ""
   "d:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1759047047 1300 b62933e007d01cfd073f79b963c01526 ""
   "d:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1759047047 1292 21c1c5bfeaebccffdb478fd231a0997d ""
   "d:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1759047047 1124 6c73e740cf17375f03eec0ee63599741 ""
@@ -88,7 +90,7 @@
   "d:/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty" 1759052025 7008 f92eaa0a3872ed622bbf538217cd2ab7 ""
   "d:/texlive/2025/texmf-dist/tex/latex/base/article.cls" 1759048863 20144 b966087dda3b194755eb460d32e2ef75 ""
   "d:/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty" 1759048863 5275 2f50a1b91fdc3c2c6ff41843a6854061 ""
-  "d:/texlive/2025/texmf-dist/tex/latex/base/size11.clo" 1759048863 8464 f339f4d5391fbe0425b2d94c90e6819e ""
+  "d:/texlive/2025/texmf-dist/tex/latex/base/size12.clo" 1759048863 8449 8dc66c6c313c8eb2d774af83bca435dd ""
   "d:/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty" 1759047718 52272 63d293bc0d496619edb57585740861a2 ""
   "d:/texlive/2025/texmf-dist/tex/latex/eso-pic/eso-pic.sty" 1759047789 11876 6ef493863ae0d7a984706973240c2237 ""
   "d:/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1759047827 46850 d87daedc2abdc653769a6f1067849fe0 ""
