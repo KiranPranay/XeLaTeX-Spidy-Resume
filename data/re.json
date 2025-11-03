@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "generated_on": "2025-09-28",
+    "version": "1.1"
+  },
+  "personal_details": {
+    "name": "Pranay Kiran",
+    "age": 24,
+    "mobile": "9676504552",
+    "email": "kiranpranay12@gmail.com",
+    "portfolio": "https://pranay.cottonseeds.org"
+  },
+  "professional_summary": "Mechanical and Aerospace Engineer with multidisciplinary expertise in structural design, thermal systems, and automation. Over 2 years of experience in design, analysis, and establishment of advanced manufacturing systems for defense-grade lithium batteries. Skilled in translating complex requirements into manufacturable designs, leading cross-functional projects, and implementing IoT-based process automation to meet stringent reliability and quality standards.",
+  "education": [
+    { "degree": "Matriculation", "institution": "Genius High School", "score": "9.3 / 10", "type": "GPA" },
+    { "degree": "Intermediate", "institution": "Sri Chaitanya Junior College", "score": "73%", "type": "Percentage" },
+    { "degree": "B.Tech Mechanical Engineering", "institution": "MLR Institute of Technology", "score": "6.89", "type": "GPA" },
+    { "degree": "M.Tech Aerospace Engineering (in-progress)", "institution": "Malla Reddy College of Engineering and Technology", "status": "1 year completed" }
+  ],
+  "skills": {
+    "engineering": ["Mechanical Design", "Aerospace Structures", "Thermal and Fluid Systems", "Design for Manufacturability", "Automation Integration"],
+    "software": ["Python", "MATLAB", "ANSYS", "Fluent", "SolidWorks Simulation", "Git", "PHP", "SQL/MySQL", "Web & App Development", "DevOps/Server Automation"],
+    "electronics_iot": ["ESP32", "Arduino", "Embedded Systems", "Industrial IoT Integration"],
+    "cad": ["NX", "SolidWorks", "Fusion 360", "FreeCAD", "AutoCAD"],
+    "analysis": ["Structural (FEA)", "Thermal and Fluid (CFD)", "Vibration & Fatigue Analysis"],
+    "soft_skills": ["Project Management", "Technical Documentation", "Cross-functional Collaboration", "Analytical Thinking", "Continuous Improvement"]
+  },
+  "experience": [
+    {
+      "position": "Design & Development Engineer (Mechanical)",
+      "organization": "Renewable Energy Systems Limited – Aerospace & Defense Thermal Battery Division",
+      "duration": "2023 – Present",
+      "responsibilities": [
+        "Design and Developed jigs, fixtures, and mechanical components for lithium thermal batteries manufacturing and various environmental test setups",
+        "Develop CAD models, perform tolerance stack-up and FEA analysis for high-temperature structural components",
+        "Lead automation and IoT integration projects for glovebox and process systems to improve manufacturability"
+      ],
+      "impact": [
+        "Enhanced production reliability by implementing process automation and structural redesigns",
+        "Delivered design documentation and qualification data for aerospace certification (AS9100 standards)",
+        "Designed and Developed glovebox and argon circulation systems improving safety and efficiency in battery assembly"
+      ]
+    },
+        {
+      "position": "Intern",
+      "organization": "Bharat Heavy Electricals Limited (BHEL)",
+      "duration": "2022",
+      "impact": [
+        "Trained in manufacturing processes and quality control for steam turbine production",
+        "Assisted in the design and analysis of turbine components using CAD and FEA tools"
+      ]
+    },
+    {
+      "position": "General Secretary",
+      "organization": "Service to Mankind (NGO)",
+      "duration": "2021 – 2023",
+      "impact": [
+        "Managed operational planning and logistics for social impact programs involving 500+ beneficiaries",
+        "Established efficient data and reporting systems improving transparency and execution speed"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Aerospace Component Design & Validation Framework",
+      "description": "Developed and tested structural components under simulated aerospace thermal and mechanical loads to validate FEA/CFD.",
+      "technologies": ["NX", "ANSYS", "SolidWorks", "Python"],
+      "impact": ["Improved design verification accuracy", "Reduced prototype iterations", "Established repeatable validation methodology"]
+    },
+    {
+      "title": "Lithium Thermal Battery Manufacturing Line",
+      "description": "Designed and established end-to-end lithium thermal battery production line incorporating gloveboxes, argon circulation, and automated control systems.",
+      "impact": ["Built aerospace-compliant manufacturing line", "Optimized process reliability and safety", "Enabled in-house R&D to production transition"]
+    },
+    {
+      "title": "Robotic Arm and Assembly Guidance System",
+      "description": "Developed IoT-based LED guidance and robotic sequencing system for precision assembly of thermal battery components.",
+      "technologies": ["ESP32", "Custom PCB", "Python", "Automation Control"],
+      "impact": ["Reduced operator dependency", "Eliminated assembly errors", "Increased throughput by 30%"]
+    },
+    {
+      "title": "Hydrogen Fuel Cell Prototype",
+      "description": "Academic project involving design and development of a hydrogen fuel cell for automotive applications."
+    }
+  ],
+  "languages": {
+    "spoken": ["English", "Hindi", "Telugu"],
+    "programming": ["Python", "MATLAB", "PHP", "HTML", "CSS", "JavaScript", "SQL/MySQL", "Flutter", "Dart", "Shell Scripting", "Java (basic)", "C/C++ (basic)"]
+  },
+  "achievements": [
+    "Executed aerospace-grade mechanical design and validation of thermal battery assemblies",
+    "Set up end-to-end lithium battery manufacturing system meeting defense standards",
+    "Implemented IoT-enabled automation to improve design-to-production traceability",
+    "Delivered verified CFD/FEA simulation data for component optimization"
+  ],
+  "preferred_roles": [
+    "Mechanical Design Engineer – Aerospace",
+    "Structural Analysis & Validation Engineer",
+    "Automation & Systems Integration Engineer"
+  ]
+}

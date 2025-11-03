@@ -1,0 +1,7 @@
+{
+  "template": "templates/electrical.tex",
+  "input_json": "data/praba.json",
+  "output_basename": "Prabakaran_Resume_electrical",
+  "engine": "xelatex",
+  "outdir": "outputs"
+}

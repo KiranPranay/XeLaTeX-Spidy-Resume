@@ -1,7 +1,7 @@
 {
   "template": "templates/spidy.tex",
-  "input_json": "data/resume.json",
-  "output_basename": "Pranay_Kiran_Resume",
+  "input_json": "data/re.json",
+  "output_basename": "Pranay_Kiran_Resume_mechanical",
   "engine": "xelatex",
   "outdir": "outputs"
 }

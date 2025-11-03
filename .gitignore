@@ -1,5 +1,6 @@
 # Build outputs
-/outputs/
+outputs/*
+!outputs/.gitkeep
 /*.pdf
 
 # LaTeX intermediates

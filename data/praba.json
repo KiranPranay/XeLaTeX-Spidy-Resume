@@ -1,0 +1,139 @@
+{
+	"meta": {
+		"generated_on": "2025-09-28",
+		"version": "1.1"
+	},
+	"personal_details": {
+		"name": "Prabakaran A",
+		"age": "25",
+		"mobile": "9080362614",
+		"email": "prabakaran220999@gmail.com",
+		"portfolio": "https://linkedin.com/in/prabakaran-annadoure/"
+	},
+	"professional_summary": "I'm Technically-proficient engineer with a strong work ethic, aiming for a challenging career in cell process engineering, particularly in lithium-ion cell testing. Seeking a role that leverages my hands-on experience in testing, validation, and troubleshooting, ensuring high-performance cells aligned with industry standards.",
+	"education": [
+		{
+			"degree": "M.Tech (Green Energy Technology)",
+			"institution": "Pondicherry University",
+			"score": "CGPA: 7.39",
+			"type": "GPA",
+			"years": "2021 - 2023"
+		},
+		{
+			"degree": "B.Tech (EEE)",
+			"institution": "Pondicherry Engineering College",
+			"score": "CGPA: 6.84",
+			"type": "GPA",
+			"years": "2017 - 2021"
+		},
+		{
+			"degree": "HSC",
+			"institution": "Alpha Matric Hr.Sec School",
+			"score": "88.3%",
+			"type": "Percentage",
+			"year": "2017"
+		},
+		{
+			"degree": "SSLC",
+			"institution": "Alpha Matric Hr.Sec School",
+			"score": "96.6%",
+			"type": "Percentage",
+			"year": "2015"
+		}
+	],
+	"skills": {
+		"engineering": [
+			"Cell Testing & Validation",
+			"Lithium-ion Chemistry",
+			"Battery Performance Analysis",
+			"Data Analysis",
+			"Battery Pack Testing",
+			"Environment Testing of Cells (Both Cell and Pack Level)"
+		],
+		"software": [
+			"Origin",
+			"MATLAB",
+			"Data Analytics"
+		],
+		"electronics_iot": [
+			"Battery Testing Equipment",
+			"Battery Management Systems",
+			"Electrochemical Impedance Spectroscopy (EIS)",
+			"Cyclic Voltammetry"
+		],
+		"analysis": [
+			"Discharge Curves at various C rate and environment",
+			"DCIR/ACIR",
+			"Efficiency Metrics",
+			"Cycle Life Analysis",
+			"Root Cause Analysis (RCA)"
+		],
+		"soft_skills": [
+			"Analytical Thinking",
+			"Attention to Detail",
+			"Problem Solving",
+			"Teamwork"
+		]
+	},
+	"experience": [
+		{
+			"position": "Battery Pack Design Engineer",
+			"organization": "Renewable Energy Systems Ltd",
+			"duration": "2023 – Present",
+			"responsibilities": [
+				"Developed and executed test plans for performance, cycle life, and safety validation of lithium-ion cells.",
+				"Defined critical test parameters including C-rates, voltage limits, temperature ranges, and current profiles.",
+				"Conducted hands-on tests on capacity, self-discharge, and cycle life.",
+				"Analyzed charge/discharge profiles, identified anomalies, and assessed degradation patterns.",
+				"Evaluated battery pack at High temperature, low temperature, vibration, bump and transportation condition as per MIL strandard."
+			],
+			"impact": [
+				"Ensured high-performance testing aligned with global compliance standards.",
+				"Improved battery reliability by performing detailed root cause analysis (RCA) and implementing corrective actions.",
+				"Contributed to continuous improvement of battery pack at low temperature using inhouse developed Polymide blanket."
+			]
+		}
+	],
+	"projects": [
+		{
+			"title": "Sodium-ion Battery Performance using NASICON-type Cathode: Influence of Synthetic Route",
+			"description": "Investigated how different synthesis methods affect the electrochemical performance of NASICON-type Na3V2(PO4)3 cathodes in sodium-ion batteries.",
+			"technologies": ["Solid-state synthesis (Ball Milling)", "Sol-gel synthesis", "Electrochemical testing", "Material characterization"],
+			"impact": ["Identified optimal synthesis routes for enhanced battery performance", "Provided insights for future cathode material development"]
+		},
+		{
+			"title": "Nanostructured Layered Transition Metal Oxide as a Cathode Material for Sodium-ion Battery",
+            "description": "Developed and characterized nanostructured layered transition metal oxides to evaluate their potential as cathode materials in sodium-ion batteries using lyophilization synthesis.",
+			"technologies": ["Lyophilization synthesis", "Electrochemical testing"],
+			"impact": ["Demonstrated electrochemical performance via coin cell compared to other layered transition metal oxide compounds", "Provided a deeper understanding of structure-property relationships"]
+		}
+	],
+	"languages": {
+		"spoken": [
+			"Tamil",
+			"English"
+		]
+	},
+	"achievements": [
+		"Training program on Industrial Process Safety Instrumentation.",
+		"PDC course on Electric and Hybrid Electric Vehicles.",
+		"Participated in National Level Conference on Recent Green Energy Trends (2022).",
+		"Secured third prize in Pondicherry Zonal level Cricket tournament.",
+		"Participated in National Service Scheme (NSS) activities in college.",
+		"Active participation in college Literary Club events.",
+		"Attended seminar conducted by Renewable Energy Agency Puducherry (REAP)."
+	],
+	"publications": [
+		{
+			"journal": "New Journal of Chemistry",
+			"title": "Sodium-ion battery using a NASICON-type Na3V2(PO4)3 cathode: quantification of diffusive and capacitive Na+ charge storage",
+			"co-authors": "Sivasubramaniam Ragul, Annadoure Prabakaran, Elayaperumal Sujithkrishnan, Kalidoss Kannadasan",
+			"DOI": "10.1039/d4nj02108h"
+		}
+	],
+	"preferred_roles": [
+		"Cell Process Engineer",
+		"Battery Testing Engineer",
+		"Lithium-ion Cell Validation Expert"
+	]
+}
